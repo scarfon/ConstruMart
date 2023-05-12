@@ -87,7 +87,7 @@
       >
         Cadastrar Produto
       </button>
-      <div class="row mt-3">
+      <div id="card" class="row mt-3">
         <div class="col-lg-3 col-md-6 col-12">
           <div class="card">
             <img
@@ -191,7 +191,10 @@
               <p class="card-text">
                 Cimento Todas as Obras 50KG CPII <br />
                 <br />
-                Votoran
+                Votorantin
+              </p>
+              <p>
+                <span class="badge text-bg-info">Ferragens</span>
               </p>
             </div>
             <ul class="list-group list-group-flush">
@@ -248,18 +251,30 @@
                 </div>
                 <div class="mb-3">
                   <label for="preco" class="form-label">Preço</label>
-                  <input type="text" class="form-control" id="preco" />
+                  <input type="number" class="form-control" id="preco" />
                 </div>
                 <div class="mb-3">
-                  <select class="form-select" aria-label="Departamento">
-                    <option selected>Selecione um Departamento</option>
-                    <option value="1">Revestimento</option>
-                    <option value="2">Ferragens</option>
-                    <option value="3">Materiais Hidráulicos</option>
-                    <option value="4">Materiais de Construção</option>
-                    <option value="5">Pintura e Acessorios</option>
-                    <option value="6">Iluminação</option>
-                    <option value="7">Ferramentas</option>
+                  <label for="imagem" class="form-label">Imagem</label>
+                  <input type="text" class="form-control" id="imagem" />
+                </div>
+                <div class="mb-3">
+                  <label for="estoque" class="form-label">Estoque</label>
+                  <input type="text" class="form-control" id="estoque" />
+                </div>
+                <div class="mb-3">
+                  <label for="departamento">Selecione um Departamento</label>
+                  <select
+                    id="departamento"
+                    class="form-select"
+                    aria-label="Departamento"
+                  >
+                    <option selected>Revestimento</option>
+                    <option>Ferragens</option>
+                    <option>Materiais Hidráulicos</option>
+                    <option>Materiais de Construção</option>
+                    <option>Pintura e Acessorios</option>
+                    <option>Iluminação</option>
+                    <option>Ferramentas</option>
                   </select>
                 </div>
               </div>
@@ -273,7 +288,9 @@
             >
               Cancelar
             </button>
-            <button type="button" class="btn btn-primary">Adicionar</button>
+            <button id="adicionar" type="button" class="btn btn-primary">
+              Adicionar
+            </button>
           </div>
         </div>
       </div>
@@ -283,5 +300,6 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/crud.js"></script>
   </body>
 </html>
