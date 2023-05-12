@@ -36,10 +36,16 @@ function cadastrar() {
   document.querySelector("#preco").value = "";
   document.querySelector("#imagem").value = "";
   document.querySelector("#estoque").value = "";
+  document.querySelector("#nome").classList.remove("is-valid")
+  document.querySelector("#descricao").classList.remove("is-valid")
+  document.querySelector("#preco").classList.remove("is-valid")
+  document.querySelector("#imagem").classList.remove("is-valid")
+  document.querySelector("#estoque").classList.remove("is-valid")
+
 }
 function validarImagem() {
   const imagem = document.querySelector("#imagem");
-  const regex = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/g;
+  const regex = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpe?g|gif|png)/g;
   if (!regex.test(imagem.value)) {
     imagem.classList.add("is-invalid");
     imagem.classList.remove("is-valid");
@@ -64,7 +70,7 @@ function apagar(botao) {
 }
 function criaCard(produto) {
   return `
-        <div class="col-lg-3 col-md-6 col-12">
+        <div class="col-lg-3 col-md-6 col-12 mt-3">
           <div class="card">
             <img
               src="${produto.imagem}"
@@ -72,7 +78,7 @@ function criaCard(produto) {
               alt="..."
               style="height: 280px"
             />
-            <div class="card-body">
+            <div style="height: 170px" class="card-body">
               <h5 class="card-title">${produto.nome}</h5>
               <p class="card-text">
                 ${produto.descricao}

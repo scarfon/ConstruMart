@@ -88,7 +88,7 @@
         Cadastrar Produto
       </button>
       <div id="card" class="row mt-3">
-        <div class="col-lg-3 col-md-6 col-12">
+        <div class="col-lg-3 col-md-6 col-12 mt-3">
           <div class="card">
             <img
               src="./assets/img/parafuso.png"
@@ -96,7 +96,7 @@
               alt="..."
               style="height: 280px"
             />
-            <div class="card-body">
+            <div style="height: 170px;" class="card-body">
               <h5 class="card-title">Parafuso</h5>
               <p class="card-text">
                 Descrição: Parafuso Aglomerado Fenda Phillips Cabeça Chata 4
@@ -117,7 +117,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-12">
+        <div class="col-lg-3 col-md-6 col-12 mt-3">
           <div class="card">
             <img
               src="./assets/img/pvc.png"
@@ -125,12 +125,10 @@
               alt="..."
               style="height: 280px"
             />
-            <div class="card-body">
+            <div style="height: 170px;" class="card-body">
               <h5 class="card-title">Cano PVC</h5>
               <p class="card-text">
                 Tubo Pvc Soldável 25 Mm X 6 M -
-                <br />
-                <br />
                 Tigre Tigre
               </p>
             </div>
@@ -148,7 +146,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-12">
+        <div class="col-lg-3 col-md-6 col-12 mt-3">
           <div class="card">
             <img
               src="./assets/img/tijolo.png"
@@ -156,12 +154,10 @@
               alt="..."
               style="height: 280px"
             />
-            <div class="card-body">
+            <div style="height: 170px;" class="card-body">
               <h5 class="card-title">Tijolos</h5>
               <p class="card-text">
-                Tijolo Baiano 11,5x14x24 <br />
-                <br />
-                <br />
+                Tijolo Baiano 11,5x14x24 
               </p>
             </div>
             <ul class="list-group list-group-flush">
@@ -178,7 +174,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-12">
+        <div class="col-lg-3 col-md-6 col-12 mt-3">
           <div class="card">
             <img
               src="./assets/img/cimento.png"
@@ -186,11 +182,11 @@
               alt="..."
               style="height: 280px"
             />
-            <div class="card-body">
+            <div style="height: 170px;" class="card-body">
               <h5 class="card-title">Cimento</h5>
               <p class="card-text">
-                Cimento Todas as Obras 50KG CPII <br />
-                <br />
+                Cimento Todas as Obras 50KG CPII 
+                
                 Votorantin
               </p>
               <p>
@@ -238,15 +234,17 @@
           <div class="modal-body">
             <form>
               <div class="mb-3">
-                <label for="nome" class="form-label">Nome</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="nome"
-                  aria-describedby="nome"
-                />
                 <div class="mb-3">
-                  <label for="descricao" class="form-label">Descrição</label>
+                  <label for="nome" class="form-label">Nome do Produto</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nome"
+                    aria-describedby="nome"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="descricao" class="form-label">Descrição do Produto</label>
                   <input type="text" class="form-control" id="descricao" />
                 </div>
                 <div class="mb-3">
@@ -254,12 +252,12 @@
                   <input type="number" class="form-control" id="preco" />
                 </div>
                 <div class="mb-3">
-                  <label for="imagem" class="form-label">Imagem</label>
+                  <label for="imagem" class="form-label">Link da Imagem</label>
                   <input type="text" class="form-control" id="imagem" />
                 </div>
                 <div class="mb-3">
                   <label for="estoque" class="form-label">Estoque</label>
-                  <input type="text" class="form-control" id="estoque" />
+                  <input type="number" class="form-control" id="estoque"/>
                 </div>
                 <div class="mb-3">
                   <label for="departamento">Selecione um Departamento</label>
