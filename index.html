@@ -35,10 +35,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sobre</a>
+              <a id="home" class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -48,31 +45,61 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Filtrar
+                Filtrar por Preco
               </a>
-              <ul class="dropdown-menu">
+              <ul id="filtroPreco" class="dropdown-menu"> 
                 <li>
-                  <a class="dropdown-item" href="#">Marca</a>
+                  <a id="filtroPrecoMenor" class="dropdown-item" href="#">Crescente</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">Categoria</a>
+                  <a id="filtroPrecoMaior" class="dropdown-item" href="#">Decrescente</a>
+                </li>
+              </ul>  
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Filtrar por Departamento
+              </a>
+              <ul id="filtroDep" class="dropdown-menu">
+                <li>
+                  <a id="filtroFerragens" class="dropdown-item" href="#">Ferragens</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">Preço</a>
+                  <a id="filtroRevestimento" class="dropdown-item" href="#">Revestimento</a>
+                </li>
+                <li>
+                  <a id="filtroMateriaisdeConstrucao" class="dropdown-item" href="#">Materiais de Construção</a>
+                </li>
+                <li>
+                  <a id="filtroMateriaisHidraulicos" class="dropdown-item" href="#">Materiais Hidráulicos</a>
+                </li>
+                <li>
+                  <a id="filtroIluminacao" class="dropdown-item" href="#">Iluminação</a>
+                </li>
+                <li>
+                  <a id="filtroFerramentas" class="dropdown-item" href="#">Ferramentas</a>
+                </li>
+                <li>
+                  <a id="filtroPinturaseAcessorios" class="dropdown-item" href="#">Pinturas e Acessorios</a>
                 </li>
               </ul>
             </li>
           </ul>
           <form class="d-flex" role="search">
             <input
+              id="busca"
               class="form-control me-2"
               type="search"
               placeholder="Buscar Produto"
               aria-label="Buscar"
             />
-            <button class="btn btn-outline-success" type="submit">
-              Buscar
-            </button>
           </form>
         </div>
       </div>
@@ -288,6 +315,89 @@
             </button>
             <button id="adicionar" type="button" class="btn btn-primary">
               Adicionar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MODAL 2 -->
+    <div
+      class="modal fade"
+      id="atualizarModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Atualizar Produto
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <div class="mb-3">
+                  <label for="nomeA" class="form-label">Nome do Produto</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nomeA"
+                    aria-describedby="nome"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="descricaoA" class="form-label">Descrição do Produto</label>
+                  <input type="text" class="form-control" id="descricaoA" />
+                </div>
+                <div class="mb-3">
+                  <label for="precoA" class="form-label">Preço</label>
+                  <input type="number" class="form-control" id="precoA" />
+                </div>
+                <div class="mb-3">
+                  <label for="imagemA" class="form-label">Link da Imagem</label>
+                  <input type="text" class="form-control" id="imagemA" />
+                </div>
+                <div class="mb-3">
+                  <label for="estoqueA" class="form-label">Estoque</label>
+                  <input type="number" class="form-control" id="estoqueA"/>
+                </div>
+                <div class="mb-3">
+                  <label for="departamentoA">Selecione um Departamento</label>
+                  <select
+                    id="departamentoA"
+                    class="form-select"
+                    aria-label="Departamento"
+                  >
+                    <option selected>Revestimento</option>
+                    <option>Ferragens</option>
+                    <option>Materiais Hidráulicos</option>
+                    <option>Materiais de Construção</option>
+                    <option>Pintura e Acessorios</option>
+                    <option>Iluminação</option>
+                    <option>Ferramentas</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button id="salvar" type="button" class="btn btn-primary">
+              Atualizar
             </button>
           </div>
         </div>
